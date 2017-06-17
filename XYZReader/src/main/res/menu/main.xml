@@ -1,0 +1,10 @@
+<menu
+    xmlns:android="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res/android"
+    android:elevation="8dp">
+    <item
+        app:title="@string/action_refresh"
+        app:id="@+id/refresh"
+        android:showAsAction="never"
+        />
+</menu>

@@ -1,0 +1,21 @@
+<resources>
+    <style
+        name="XYZReader"
+        parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/light_blue_700</item>
+        <item name="colorPrimaryDark">@color/light_blue_900</item>
+        <item name="colorAccent">@color/deep_orange_500</item>
+        <item name="android:textColorPrimary">@android:color/black</item>
+        <item name="android:textColorSecondary">@android:color/white</item>
+        <item name="android:textColorTertiary">@color/grey_500</item>
+        <item name="android:colorBackground">@android:color/black</item>
+        <item name="android:panelBackground">@android:color/white</item>
+        <item name="android:customNavigationLayout">@color/blue_grey_900</item>
+    </style>
+
+    <style
+        name="Toolbar" parent="ThemeOverlay.AppCompat.Light">
+        <item name="android:colorBackground">@color/light_blue_900</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+</resources>
