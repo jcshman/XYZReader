@@ -33,8 +33,6 @@ public class UpdaterService extends IntentService {
 
     @Override
     protected void onHandleIntent(Intent intent) {
-     //   Time time = new Time();
-
         ConnectivityManager cm = (ConnectivityManager) getSystemService(CONNECTIVITY_SERVICE);
         NetworkInfo ni = cm.getActiveNetworkInfo();
         if (ni == null || !ni.isConnected()) {
@@ -52,9 +50,7 @@ public class UpdaterService extends IntentService {
 
         // Delete all items
         cpo.add(ContentProviderOperation.newDelete(dirUri).build());
-    //    System.out.println("updateservice: refresh");
-//try{/Thread.sleep(10000);}catch(Exception e){System.out.println(e);}
-      //  System.out.println("updateservice: awake");
+
         try {
             JSONArray array = RemoteEndpointUtil.fetchJsonArray();
             if (array == null) {
@@ -71,7 +67,6 @@ public class UpdaterService extends IntentService {
                 values.put(ItemsContract.Items.THUMB_URL, object.getString("thumb" ));
                 values.put(ItemsContract.Items.PHOTO_URL, object.getString("photo" ));
                 values.put(ItemsContract.Items.ASPECT_RATIO, object.getString("aspect_ratio" ));
-               // System.out.println("updater: " + object);
                 values.put(ItemsContract.Items.PUBLISHED_DATE, object.getString("published_date"));
                 cpo.add(ContentProviderOperation.newInsert(dirUri).withValues(values).build());
             }

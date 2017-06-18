@@ -16,7 +16,7 @@
         android:paddingRight="@dimen/list_side_margin"
         android:paddingBottom="28dp" />
 
-    <FrameLayout
+    <android.support.design.widget.AppBarLayout
         android:id="@+id/toolbar_container"
         android:layout_width="match_parent"
         android:layout_height="112dp"
@@ -40,5 +40,5 @@
             android:contentDescription="@string/app_name"
             android:paddingLeft="11dp"
             android:src="@drawable/logo"/>
-    </FrameLayout>
+    </android.support.design.widget.AppBarLayout>
 </android.support.design.widget.CoordinatorLayout>
